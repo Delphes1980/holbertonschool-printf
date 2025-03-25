@@ -1,5 +1,8 @@
 # **_printf**
 
+![Diagramme1 drawio](https://github.com/user-attachments/assets/1ea82532-d843-4625-b30c-cce19a0f20f5)
+
+
 ### **Description :**
 
 _printf is a simplified reimplementation of the standard C printf function. It prints formatted text to the standard output and supports the following format specifiers:
