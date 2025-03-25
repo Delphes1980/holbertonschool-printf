@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
 *input_length - defines the length of the string
@@ -42,7 +43,7 @@ int print_char(char c)
 */
 int print_string(char *string)
 {
-	int i, length;
+	int length;
 
 	if (string == NULL)
 	{
@@ -51,7 +52,7 @@ int print_string(char *string)
 
 	length = input_length(string);
 
-		return (write(1, string, length));
+	return (write(1, string, length));
 
 }
 
