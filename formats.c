@@ -13,7 +13,7 @@ int input_length(char *s)
     {
         return (-1);
     }
-    
+
     for (i = 0; *s != '\0'; s++)
     {
         i++;
@@ -58,14 +58,43 @@ int print_mod(void)
     return (write(1, "%", 1));
 }
 /**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+ int _putchar(char c)
+ {
+    return (write(1, &c, 1));
+ }
+/**
  * print_int - integer to be printed
  * 
  */
-int print_num (int n)
+int print_number (int n)
 {
-	int n;
-	if (n == 0)
-	return (n)
+	int num;
+    unsigned int i;
 
-	else if (n ==)
+	if (n == 0)
+	return (n);
+
+	if (n < 0)
+    {
+    _putchar ('-');
+    num = -n;
+    }
+
+    if (n > 0)
+    {
+        for (i = 0; i < n; i++)
+
+        if (num / 10)  // Si le nombre est > 9, on continue l'affichage récursif
+        print_number(num / 10);
+
+    _putchar((num % 10) + '0');  // Affichage du dernier chiffre
+
+    return (0);
+    }
 }

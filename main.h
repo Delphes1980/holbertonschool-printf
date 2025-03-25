@@ -11,5 +11,6 @@ int format_c(char *return_value);
 int format_s(char *string);
 int format_mod(void);
 int print_number(int n);
+int _putchar(char c);
 
 #endif
