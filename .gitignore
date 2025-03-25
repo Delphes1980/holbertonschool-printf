@@ -2,3 +2,4 @@
 ./formats.c
 ./main.h
 ./test_printf.c
+./vscode
