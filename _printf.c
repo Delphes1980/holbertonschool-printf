@@ -51,9 +51,3 @@ int _printf(const char *format, ...)
 	va_end(args);
 	return (count);
 }
-
-int main(void) {
-    int len = _printf("Test: %s %c %% %d\n", "Hello", 'X', 42);
-    printf("Longueur: %d\n", len);
-    return 0;
-}
