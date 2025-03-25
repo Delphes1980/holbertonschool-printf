@@ -77,7 +77,7 @@ int print_mod(void)
 int print_number(int n)
 {
 	int num;
-	unsigned int i;
+	int i;
 
 	if (n == 0)
 	{
