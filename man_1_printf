@@ -1,0 +1,13 @@
+.TH _PRINTF 1 "2025-03-25" GNU "_PRINTF"
+.SH NAME
+.B _printf
+\- formatted output conversion
+.SH SYNOPSIS
+.B #include "main.h"
+.LP
+.BI int _printf(consta char *format, ...);
+.SH DESCRIPTION
+.BR printf() is a function in the standard library (stdio.h) for displaying formatted 
+text. It interprets format, replaces specifiers with their values,
+and writes the result to standard output (stdout).
+.LP
