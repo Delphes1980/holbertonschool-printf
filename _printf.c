@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
 * _printf - implementation of printf command
@@ -19,31 +20,40 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (-1);
 
-		for (i = 0; format[i] != '\0'; i++)
+	for (i = 0; format[i] != '\0'; i++)
+	{
+		if (format[i] == '%')
 		{
-			if (format[i] == '%')
-			{
-				i++;
+			i++;
 
-				if (format[i] == 'c')
-					count += print_char (va_arg(args, int));
+			if (format[i] == 'c')
+				count += print_char (va_arg(args, int));
 
-				else if (format[i] == 's')
-					count += print_string (va_arg(args, char *));
+			else if (format[i] == 's')
+				count += print_string (va_arg(args, char *));
 
-				else if (format[i] == '%')
-					count += print_mod ();
+			else if (format[i] == 'd' || format[i] == 'i')
+				count += print_number (va_arg(args, int));
 
-				else
-				count += write(1, &format[i], 1);
-			}
+			else if (format[i] == '%')
+				count += print_mod ();
 
 			else
-			{
-				count += write(1, &format[i], 1);
-			}
+			count += write(1, &format[i], 1);
 		}
 
-		va_end(args);
-		return (count);
+		else
+		{
+			count += write(1, &format[i], 1);
+		}
+	}
+
+	va_end(args);
+	return (count);
+}
+
+int main(void) {
+    int len = _printf("Test: %s %c %% %d\n", "Hello", 'X', 42);
+    printf("Longueur: %d\n", len);
+    return 0;
 }
