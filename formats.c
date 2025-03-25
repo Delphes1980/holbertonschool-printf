@@ -56,3 +56,15 @@ int print_mod(void)
 {
     return (write(1, "%", 1));
 }
+/**
+ * print_int - integer to be printed
+ * 
+ */
+int print_num (int n)
+{
+	int n;
+	if (n == 0)
+	return (n)
+
+	else if (n ==)
+}
