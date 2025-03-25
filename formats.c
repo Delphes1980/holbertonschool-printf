@@ -72,10 +72,10 @@ int print_mod(void)
 *
 * Return: the number to be printed
 */
-unsigned int print_number(int n)
+int print_number(int n)
 {
 	int num;
-	unsigned int i;
+	int i;
 
 	if (n == 0)
 	{
