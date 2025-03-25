@@ -1,0 +1,5 @@
+./main.c
+./formats.c
+./main.h
+./test_printf.c
+./vscode
