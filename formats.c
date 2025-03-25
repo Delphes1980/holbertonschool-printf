@@ -13,6 +13,7 @@ int input_length(char *s)
     {
         return (-1);
     }
+    
     for (i = 0; *s != '\0'; s++)
     {
         i++;
