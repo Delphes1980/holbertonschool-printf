@@ -8,5 +8,5 @@
 
 int print_mod(void)
 {
-	return (write(1, "%", 1));
+	_putchar("%");
 }
