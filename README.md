@@ -71,7 +71,15 @@ main.h: Contains function declarations and necessary includes.
 
 _printf.c: Implements the _printf function and handles format specifiers.
 
-formats.c: Contains helper functions for printing characters and strings.
+input_length.c: Define the length of the string.
+
+print_char.c: Character to be printed.
+
+print_string.c: String to be printed.
+
+print_number.c: Integers to be printed.
+
+_putchar.c: Writes the character.
 
 ## **Authors :**
 
