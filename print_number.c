@@ -2,14 +2,14 @@
 
 /**
 * print_number - integer to be printed
-* @n: number given by user
+* @n: the numbers
 *
-* Return: the number to be printed
+* Return: The number printed
 */
 int print_number(int n)
 {
-	int num;
-	int i;
+	unsigned int num;
+	int count = 0;
 
 	if (n == 0)
 	{
@@ -19,20 +19,20 @@ int print_number(int n)
 	if (n < 0)
 	{
 		_putchar ('-');
+		count++;
 		num = -n;
 	}
 
-	if (n > 0)
+	else
 	{
-		for (i = 0; i < n; i++)
-		{
-			if (num / 10)
-			{
-				print_number(num / 10);
-				_putchar((num % 10) + '0');
-			}
-		}
+	num = n;
 	}
 
-	return (0);
-}
+	if (num / 10)
+	{
+		count += print_number(num / 10);
+	}
+
+	_putchar((num % 10) + '0');
+
+	return (count);
