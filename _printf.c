@@ -36,9 +36,7 @@ int _printf(const char *format, ...)
 				count += print_number(va_arg(args, int));
 
 			else if (format[i] == '%')
-			{
 				count += write(1, "%", 1);
-			}
 
 			else
 			count += write(1, &format[i], 1);

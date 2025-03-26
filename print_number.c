@@ -31,7 +31,7 @@ int print_number(int n)
 		count += print_number(num / 10);
 	}
 
-_putchar((num % 10));
+_putchar((num % 10) + '\0');
 count++;
 
 return (count);
