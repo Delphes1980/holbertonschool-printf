@@ -12,7 +12,10 @@ int print_number(int n)
 	int count = 0;
 
 	if (n == 0)
-	_putchar('0');
+	{
+		_putchar('0');
+		return (1);
+	}
 
 	if (n < 0)
 	{
@@ -31,7 +34,7 @@ int print_number(int n)
 		count += print_number(num / 10);
 	}
 
-_putchar((num % 10) + '\0');
+_putchar((num % 10) + '0');
 count++;
 
 return (count);
