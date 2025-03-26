@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* print_int - integer to be printed
+* print_number - integer to be printed
 * @n: number given by user
 *
 * Return: the number to be printed
