@@ -1,7 +1,7 @@
 
 # **_printf**
 
-![Diagramme1 drawio](https://github.com/user-attachments/assets/1ea82532-d843-4625-b30c-cce19a0f20f5)
+![Image](https://github.com/user-attachments/assets/753c0363-4195-4289-896d-bf5bff029d94)
 
 
 ### **Description :**
@@ -34,7 +34,7 @@ Implements a minimal version of printf without handling flags, width, precision,
 
 The program can be compiled using gcc as follows:
 
-gcc -Wall -Werror -Wextra -pedantic *.c -o printf
+$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 
 ## **Usage :**
 
@@ -43,7 +43,7 @@ gcc -Wall -Werror -Wextra -pedantic *.c -o printf
 int main(void)
 
 {
-	
+
     _printf("Hello, %s!\n", "world");
 
     _printf("Character: %c\n", 'A');
@@ -71,17 +71,7 @@ main.h: Contains function declarations and necessary includes.
 
 _printf.c: Implements the _printf function and handles format specifiers.
 
-input_length.c: Contains helper function for calculating length of the string.
-
-print_char.c: contains helper function for printing a character.
-
-print_string.c: contains helper function for printing a string.
-
-print_number.c: contains helper function for printing an integer.
-
-print_mod.c: contains helper function for printing pourcent symbol.
-
-_putchar.c: contains implementation of command putchar.
+formats.c: Contains helper functions for printing characters and strings.
 
 ## **Authors :**
 
