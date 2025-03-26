@@ -13,7 +13,7 @@ int print_string(char *string)
 
 	if (string == NULL)
 	{
-		return (-1);
+		return (write(1, "(null)", 7);
 	}
 
 	length = input_length(string);
