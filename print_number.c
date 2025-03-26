@@ -12,7 +12,7 @@ int print_number(int n)
 	int count = 0;
 
 	if (n == 0)
-	_putchar(n);
+	count += _putchar('0');
 
 	if (n < 0)
 	{
