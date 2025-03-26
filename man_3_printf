@@ -1,4 +1,4 @@
-.TH _PRINTF 1 "2025-03-25" GNU "_PRINTF"
+.TH _PRINTF 3 "2025-03-25" GNU "_PRINTF"
 .SH NAME
 .B _printf
 \- formatted output conversion
