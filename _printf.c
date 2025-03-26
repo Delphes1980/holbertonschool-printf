@@ -38,7 +38,6 @@ int _printf(const char *format, ...)
 			else if (format[i] == '%')
 			{
 				count += write(1, "%", 1);
-				continue;
 			}
 
 			else
