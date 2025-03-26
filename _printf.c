@@ -27,16 +27,16 @@ int _printf(const char *format, ...)
 			i++;
 
 			if (format[i] == 'c')
-				count += print_char (va_arg(args, int));
+				count += print_char(va_arg(args, int));
 
 			else if (format[i] == 's')
-				count += print_string (va_arg(args, char *));
+				count += print_string(va_arg(args, char *));
 
 			else if (format[i] == 'd' || format[i] == 'i')
-				count += print_number (va_arg(args, int));
+				count += print_number(va_arg(args, int));
 
 			else if (format[i] == '%')
-				count += print_mod ();
+				count += write(1, "%", 1);
 
 			else
 			count += write(1, &format[i], 1);
@@ -50,10 +50,4 @@ int _printf(const char *format, ...)
 
 	va_end(args);
 	return (count);
-}
-
-int main(void) {
-    int len = _printf("Test: %s %c %% %d\n", "Hello", 'X', 42);
-    printf("Longueur: %d\n", len);
-    return 0;
 }
