@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
 * print_mod - pourcent to be printed
@@ -8,5 +9,5 @@
 
 int print_mod(void)
 {
-	_putchar("%");
+	return (write(1, "%", 1));
 }
