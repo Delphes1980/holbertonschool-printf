@@ -23,6 +23,7 @@ int _printf(const char *format, ...)
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
+		{
 			i++;
 
 			if (format[i] == 'c')
@@ -40,6 +41,7 @@ int _printf(const char *format, ...)
 			else
 				count += write(1, &format[i], 1);
 		}
+
 		else
 			count += write(1, &format[i], 1);
 	}
